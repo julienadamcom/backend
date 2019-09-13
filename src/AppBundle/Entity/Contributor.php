@@ -8,6 +8,7 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\Validator\Constraints;
 
 /**
  * Contributor
@@ -33,6 +34,13 @@ class Contributor implements ImageUploadable
      * @ORM\Column(name="name", type="string", length=255)
      */
     private $name;
+
+    /**
+     * @var string
+     * @ORM\Column(name="email", type="string", length=255)
+     * @Constraints\Email
+     */
+    private $email;
 
     /**
      * @var string
@@ -153,6 +161,19 @@ class Contributor implements ImageUploadable
     public function getImage()
     {
         return $this->image;
+    }
+
+    public function getEmail(): string
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param string $email
+     */
+    public function setEmail(string $email): void
+    {
+        $this->email = $email;
     }
 
     public function __toString()
