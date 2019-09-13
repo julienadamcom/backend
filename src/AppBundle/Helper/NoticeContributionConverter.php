@@ -6,22 +6,30 @@ use AppBundle\Entity\Contributor;
 use AppBundle\Entity\MatchingContext;
 use AppBundle\Entity\Notice;
 use AppBundle\Entity\NoticeContribution;
+use InvalidArgumentException;
 
 class NoticeContributionConverter
 {
 
     static function toContributor(NoticeContribution $contribution): Contributor
     {
-        return (new Contributor())
-            ->setName($noticeContribution->getContributorName())
-            ->setEmail($noticeContribution->getContributorEmail();
+        $contributor = new Contributor();
+        $contributor
+            ->setName($contribution->getContributorName())
+            ->setEmail($contribution->getContributorEmail());
+        return $contributor;
     }
 
+    /**
+     * @throws InvalidArgumentException
+     */
     static function toMatchingContext(NoticeContribution $contribution): MatchingContext
     {
-        // FIXME
-        $domainName = $contribution->getUrl();
-        $urlRegex = $contribution->getUrl();
+        $url = parse_url($contribution->getUrl());
+        if (!$url) throw new InvalidArgumentException("Unable to parse URL “{$contribution->getUrl()}”");
+
+        $domainName = $url['host'];
+        $urlRegex = $url['path'] . '(?.+)?(#.+)?$'; // FIXME check out optional query and fragment (not sure this regex works well)
 
         return (new MatchingContext())
             ->setDomainName($domainName)

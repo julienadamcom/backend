@@ -41,6 +41,9 @@ class PostNoticeContributionAction extends BaseAction
     }
 
     /**
+     *
+     * FIXME wite e2e test for this one and other classes we’ve created on the go
+     *
      * @Route("/notices")
      * @Method("POST")
      */
