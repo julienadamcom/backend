@@ -2,12 +2,10 @@
 
 :+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
 
-
 This is a pretty basic Symfony/EasyAdmin application
 
-The following is a set of guidelines for contributing to DisMoi. 
+The following is a set of guidelines for contributing to DisMoi.
 These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
-
 
 ## Code of conduct
 
@@ -29,9 +27,9 @@ This section guides you through submitting a bug report. Following these guideli
 
 Explain the problem and include additional details to help maintainers reproduce the problem:
 
-* **Use a clear and descriptive title** for the issue to identify the problem.
-* **Describe the exact steps which reproduce the problem** in as many details as possible. 
-* **Provide specific examples to demonstrate the steps**. 
+- **Use a clear and descriptive title** for the issue to identify the problem.
+- **Describe the exact steps which reproduce the problem** in as many details as possible.
+- **Provide specific examples to demonstrate the steps**.
 
 Provide more context by answering these questions:
 
@@ -39,12 +37,11 @@ Provide more context by answering these questions:
 
 #### How Do I Submit A (Good) Enhancement Suggestion?
 
-
-* **Use a clear and descriptive title** for the issue to identify the suggestion.
-* **Provide a step-by-step description of the suggested enhancement** in as many details as possible.
-* **Provide specific examples to demonstrate the steps**.
-* **Describe the current behavior** and **explain which behavior you expected to see instead** and why.
-* **Explain why this enhancement would be useful** to most users.
+- **Use a clear and descriptive title** for the issue to identify the suggestion.
+- **Provide a step-by-step description of the suggested enhancement** in as many details as possible.
+- **Provide specific examples to demonstrate the steps**.
+- **Describe the current behavior** and **explain which behavior you expected to see instead** and why.
+- **Explain why this enhancement would be useful** to most users.
 
 ### Your First Code Contribution
 
@@ -54,9 +51,13 @@ Unsure where to begin contributing ? You can start by looking through these [Hel
 
 #### Environment Variables
 
-You can edit .env to your liking (optional). This file should be .gitignored some time. 
+You can edit .env to your liking (optional). This file should be .gitignored some time.
 
 #### Dev (w/ docker)
+
+##### Install and run docker
+
+[https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/)
 
 The first run may take few minutes since images are to be built,
 composer has to install project dependencies and doctrine has to
@@ -68,7 +69,7 @@ $ docker-compose up
 
 #### Aliases
 
-Some aliases are conveniently made available... 
+Some aliases are conveniently made available...
 
 ```shell script
 $ . ./alias
@@ -86,8 +87,8 @@ $ runtests
 ```
 
 #### Admin access
-[http://localhost:8088](http://localhost:8088)
 
+[http://localhost:8088](http://localhost:8088)
 
 ### Pull Requests
 
@@ -113,7 +114,7 @@ We also use [PHP CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) to 
 
 We use [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/) messages guidelines
 
-Each commit message consists of a **header**, a **body** and a **footer**.  The header has a special
+Each commit message consists of a **header**, a **body** and a **footer**. The header has a special
 format that includes a **type**, a **scope** and a **subject**:
 
 ```
@@ -131,11 +132,12 @@ to read on GitHub as well as in various git tools.
 
 The footer should contain a [closing reference to an issue](https://help.github.com/articles/closing-issues-via-commit-messages/) if any.
 
-Samples: 
+Samples:
 
 ```
 docs(readme): update README to open source code
 ```
+
 ```
 fix(contributors): contributors are not sorted
 
@@ -143,30 +145,34 @@ Contributors are now sorted in alphabetical order.
 ```
 
 #### Type
+
 Must be one of the following:
 
-* **build**: Changes that affect the build system or external dependencies
-* **ci**: Changes to our CI configuration files and scripts
-* **docs**: Documentation only changes
-* **feat**: A new feature or functional change
-* **fix**: A bug fix
-* **perf**: A code change that improves performance
-* **refactor**: A code change that neither fixes a bug nor adds a feature
-* **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing type, etc)
-* **test**: Adding missing tests or correcting existing tests
+- **build**: Changes that affect the build system or external dependencies
+- **ci**: Changes to our CI configuration files and scripts
+- **docs**: Documentation only changes
+- **feat**: A new feature or functional change
+- **fix**: A bug fix
+- **perf**: A code change that improves performance
+- **refactor**: A code change that neither fixes a bug nor adds a feature
+- **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing type, etc)
+- **test**: Adding missing tests or correcting existing tests
 
 #### Subject
+
 The subject contains a succinct description of the change:
 
-* use the imperative, present tense: "change" not "changed" nor "changes"
-* don't capitalize the first letter
-* no dot (.) at the end
+- use the imperative, present tense: "change" not "changed" nor "changes"
+- don't capitalize the first letter
+- no dot (.) at the end
 
 #### Body
+
 Just as in the **subject**, use the imperative, present tense: "change" not "changed" nor "changes".
 The body should include the motivation for the change and contrast this with previous behavior.
 
 #### Footer
+
 The footer should contain any information about **Breaking Changes** and is also the place to
 reference GitHub issues that this commit **Closes**.
 
@@ -176,9 +182,9 @@ reference GitHub issues that this commit **Closes**.
 
 Here’s some information on how to deploy to [CleverCloud](https://www.clever-cloud.com):
 
-[Using CleverCloud](docs/using_clever_cloud.md) 
+[Using CleverCloud](docs/using_clever_cloud.md)
 
---------------------------------------------
+---
 
 Thanks! :heart: :heart: :heart:
 
